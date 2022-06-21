@@ -26,7 +26,7 @@ export default function App() {
     e.preventDefault();
     const form = document.querySelector("form");
     const QRtext = form.querySelector("p")
-
+    
     function fetchRequest(formData) {
       QRtext.innerText = "Scanning QR...";
       fetch("http://api.qrserver.com/v1/read-qr-code/",{
@@ -94,9 +94,20 @@ export default function App() {
         }}>
           <img alt='' src={""} />
         </Box>
+
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: "center",
+          marginTop: 20}}>
+        <a href="https://github.com/edray28/qr-creator" 
+        ><img
+          src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/github-icon.png"
+          alt="github page"
+          style={{width: 50}}
+      /></a>
+        </Box>
       </Container>
     </ThemeProvider>
   )
 }
-
-
