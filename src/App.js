@@ -23,6 +23,7 @@ export default function App() {
   }
 
   const uploadQR = (e) => {
+    e.preventDefault();
     const form = document.querySelector("form");
     const QRtext = form.querySelector("p")
 
